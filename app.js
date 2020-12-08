@@ -8,10 +8,8 @@ const aideResultat = document.querySelector('.aide');
 const toutesLesQuestions = document.querySelectorAll('.question-block');
 let verifTableau = [];
 
-
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-
     for(i =1; i < 6; i++) {
         tableauResultats.push(document.querySelector(`input[name="q${i}"]:checked`).value)
     }
@@ -40,7 +38,6 @@ function afficherResultats(tabCheck){
     console.log(nbDeFautes);
 
     switch(nbDeFautes) {
-
         case 0:
             titreResultat.innerText = `✔️ Bravo, c'est un sans faute ! ✔️`
             aideResultat.innerText = ''
@@ -74,12 +71,8 @@ function afficherResultats(tabCheck){
 
         default:
             'Wops, cas innatendu.';
-
     }
-
-
 }
-
 
 function couleursFonction(tabValBool){
 
@@ -94,10 +87,8 @@ function couleursFonction(tabValBool){
             setTimeout(() => {
                 toutesLesQuestions[j].classList.remove('echec');
             }, 500)
-
         }
     }
-
 }
 
 toutesLesQuestions.forEach(item => {
